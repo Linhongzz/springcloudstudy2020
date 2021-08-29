@@ -18,7 +18,9 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka #eureka集群配置用,隔开
-
+  instance:
+    instance-id: payment8002 #实例名称
+    ip-address: true #是否显示ip
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.atguigu.springcloud.entities

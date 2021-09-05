@@ -10,4 +10,9 @@ eureka:
       #集群指向其它eureka
       #  defaultZone: http://eureka7002.com:7002/eureka/
       #单机就是7001自己
-      defaultZone: http://eureka7002.com:7002/eureka/
+      defaultZone: http://eureka7002.com:7001/eureka/
+  server:
+    # 是否开启自我保护，关闭自我保护后，会保证不可用服务及时被剔除
+    enable-self-preservation: false
+    # 清理间隔（单位毫秒，默认是60*1000）
+    eviction-interval-timer-in-ms: 2000
